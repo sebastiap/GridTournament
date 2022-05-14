@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Practica con Sitio de Pruebas - Grid Tournament 🧩
+El objetivo de este sitio es servir como practica y repaso de CSS, creando distintas estructuras con CSS grid y FlexBox, aprendiendo las ventajas y diferencias de cada uno.
+Este sitio adaptara pequeños juegos diseñados por mi mismo. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sitio online en Github Pages :
+No disponible aun.
 
-## Available Scripts
+## Explicacion de los Juegos
+### Torneo
+Adaptacion de un juego realizado previamente en Vue con Bootstrap. Esta version en react contara con una mejor visualizacion.
 
-In the project directory, you can run:
+### Tarot
+Tirada basica de 3 cartas.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Conceptos Generales
+* Buenas Practicas en Estructura de directorios
+* Uso de IA - Tabnine
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Conceptos React
+### Conceptos Teoricos
+* Routes 
 
-### `npm test`
+## CSS
+* Css Grid Layout
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Pendientes
+- [x] Css Grid Layout
+- [ ] FlexBox Layout(interno)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Juegos
+- [ ]  Torneo
+- [ ]  Tarot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Opcionales
+- [ ] Storage en una BD
+- [ ] Backend en Node/Python
+- [ ] Herramienta para desarrollo de juegos?
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Problemas Resueltos - General 🐛🦗🐞
+### localStorage  
+Para evitar que se loguee varias verces, termine ubicandolo en el archivo de contexto. Pense por un momento en aplicarlo en app.js o en la parte de secciones pero demostro ser 
+problematico y termine optando por la solucion mas feliz.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Problemas Resueltos - Github Pages 🐛
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Ejecutar pagina en Github Pages 🦋
+Seguir las instrucciones de https://github.com/gitname/react-gh-pages
+Ejecutar el siguiente comando para deployar:
+~~~
+npm run deploy
+~~~
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### TypeError: MiniCssExtractPlugin is not a constructor 🦋
+Originalmente mi repositorio remoto se llamaba github, tuve que agregar una referencia con el nombre origin
+~~~
+npm i -D --save-exact mini-css-extract-plugin@2.4.5
+~~~
 
-## Learn More
+### Failed to get remote.origin.url 🦋
+Originalmente mi repositorio remoto se llamaba github, tuve que agregar una referencia con el nombre origin
+~~~
+git remote add origin https://github.com/sebastiap/spika-games.git
+~~~
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Imagenes no encontradas 🐜
+La solucion mas facil y creo que mas conveniente a la larga , es hacer referencia a la ubicacion de las imagenes en github. Para un server diferente debere apuntar con
+una variable PATH.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Server Local falla luego de configurar GHPAGES 🐜
+Por lo visto, algo empezo a fallar localmente, luego de fixear algunos errores menores, me doy cuenta que no es que no anda, si no que tarda unos segundos en renderizar el CSS.
+No se si hay solucion para esto o es un bug, pero dado que es solo local y para este proyecto no es un error importante.
