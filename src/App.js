@@ -3,6 +3,7 @@ import {  Route, Routes  } from 'react-router-dom';
 
 import Torneo from './components/Torneo';
 import Tarot from './components/Tarot'
+import Menu from './components/menu';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       </Route>
       <Route path="/tarot" element={<Tarot/>}>
       </Route>
-      <Route path="*" element={<Tarot/>}>
+      <Route path="*" element={<Menu/>}>
       </Route>
     </Routes>
   );

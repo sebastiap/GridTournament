@@ -3,7 +3,6 @@ import '../../src/styles/tarot.css';
 
 function Tarot() {
   return (
-    <div className="App">
 	<div className="contenedorTarot">
 		<header className="header">
 			<h2>HEADER</h2>
@@ -21,7 +20,6 @@ function Tarot() {
 			<h3>FOOTER</h3>
 		</footer>
 	</div>
-    </div>
   );
 }
 
