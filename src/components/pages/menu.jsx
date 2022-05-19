@@ -20,6 +20,12 @@ function Menu() {
             Tarot de 3 Cartas
             </h1>
             <p> En este proyecto la tarotista nos brindara predicciones sobre Presente Pasado y Futuro.</p>
+            <div className={menuClasses.flexContainer}>
+            <div className={menuClasses.flexItemCard}>The Fool</div>
+            <div className={menuClasses.flexItemCard}>The World</div>
+            <div className={menuClasses.flexItemCard}>The Hermit</div>
+
+            </div>
             </Link>
             {/* <div className={menuClasses.opcion3}>
             Soy la tercera opcion

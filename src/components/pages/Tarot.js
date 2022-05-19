@@ -1,5 +1,5 @@
 
-import '../../src/styles/tarot.css';
+import '../../../src/styles/tarot.css';
 
 function Tarot() {
   return (

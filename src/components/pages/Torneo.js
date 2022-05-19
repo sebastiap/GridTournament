@@ -1,5 +1,5 @@
 
-import '../../src/styles/App.css';
+import '../../../src/styles/App.css';
 
 function Torneo() {
   return (
@@ -26,11 +26,11 @@ function Torneo() {
 		<div className="rival">
 			<h3>Rival</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adip</p>
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmQxJGv23Y2nkUyfQZZTWRWTMEILZm756pg&usqp=CAU" />
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmQxJGv23Y2nkUyfQZZTWRWTMEILZm756pg&usqp=CAU" alt="enemy" />
 		</div>
 		<div className="protagonista">
 			<h3>Protagonista</h3>
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfCQVP-lxNewrbhT5y2M0RdAHRg-aFxdSrpQ&usqp=CAU" />
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfCQVP-lxNewrbhT5y2M0RdAHRg-aFxdSrpQ&usqp=CAU" alt="Protagonista"/>
 
 		</div>
 		<div className="widget-1">

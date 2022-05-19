@@ -19,10 +19,11 @@ Tirada basica de 3 cartas.
 
 ## Conceptos React
 ### Conceptos Teoricos
-* Routes 
+* Routes (v6)
 
 ## CSS
 * Css Grid Layout
+* Flexbox Layout
 
 
 ## Pendientes

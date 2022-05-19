@@ -56,7 +56,7 @@ color:black;
 
 .contenedor .opcion1,
 .contenedor .opcion2,
-.contenedor .opcion3{
+.contenedor .opcion3 {
 	background: #333333;
 	padding: 20px;
 	height: 250px;
@@ -65,6 +65,32 @@ color:black;
 	border-radius: 4px;
 	transition: 0.5s;
 }
+
+
+.opcion2 .flexContainer {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+height: 90%;
+text-align: center;
+
+}
+.flexItemCard {
+height:180px;
+width:150px;
+background: green;
+transition: 0.5s;
+}
+
+.flexItemCard:hover {
+	height:300px;
+	width:280px;
+
+	background: darkred;
+	margin: 0px 20px 20px 30px;
+	}
+
 /*
 
 @media screen and (max-width: 768px){
