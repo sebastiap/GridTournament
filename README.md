@@ -28,6 +28,7 @@ Tirada basica de 3 cartas.
 
 ## Pendientes
 - [x] Css Grid Layout
+- [x] FlexBox Layout(interno) - Opcion Menu
 - [ ] FlexBox Layout(interno)
 
 ## Juegos

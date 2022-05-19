@@ -59,6 +59,10 @@ body {
 .contenedor .protagonista {
   height: 200px;
 	grid-area: protagonista;
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	overflow: hidden;
 }
 
 .contenedor .sidebar {
