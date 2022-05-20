@@ -1,23 +1,30 @@
 
 import '../../../src/styles/App.css';
+import {useState} from "react"
 import {personajes,formas,imgenemigo,options,Luchar,Empujar,Huir} from '../logic/Torneo'
 
 function Torneo() {
 
+const [formaProta,setFormaProta] = useState("Base")
 const razas = () => {
-	var personaje = personaje[0];
-	var formasposibles = formas.filter(raza => personaje.raza == raza
-	//  || 
-	// (personaje.ki == formita.ki)|| 
-	// (personaje.nombre == formita.user) || 
-	// (formita.user == 'TODOS')
+	var personaje = personajes[0];
+	// console.log(personaje)
+	console.log(formas);
+	var formasposibles = formas.filter(forma => (forma.raza === personaje.raza)
+	 || (personaje.ki === forma.ki) 
+	 ||(personaje.nombre === forma.user) 
+	 || (forma.user === 'TODOS')
 	)
 	console.log(formasposibles);
 	return formasposibles;
 
 }
-	
+	function changeRaza(){
+		var razas = razas();
+		console.log(razas)
 
+	}
+	var misformas = razas();
   return (
     <div className="App">
 	<div className="contenedor">
@@ -44,7 +51,9 @@ const razas = () => {
 			<h3>{personajes[0].nombre}</h3>
 			<p>Guerrero {personajes[0].raza}</p>
 			<p>Nivel de Pelea: {personajes[0].id}</p>
-			<button type="button">Tranformar</button>
+			<p>Forma Actual: {formaProta}</p>
+			{misformas.map(forma => 
+				<button type="button" onClick={() => setFormaProta(forma.modo)}>{forma.modo}</button>)}
 			</div>
 
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfCQVP-lxNewrbhT5y2M0RdAHRg-aFxdSrpQ&usqp=CAU" alt="Protagonista"/>
