@@ -49,6 +49,7 @@ export var	personajes = [
 		  modo: 'Raged',
 		  raza:'NO',
 		  ki:'NO',
+		  aura:"#b30000",
 		  user: 'TODOS' //Significa que lo puede usar cualquiera
 		},
 		{
@@ -56,6 +57,7 @@ export var	personajes = [
 		  modo: 'Kaioken',
 		  raza:'NO',
 		  ki:'NO',
+		  aura:"red",
 		  user: 'Goku'
 		},
 		{
@@ -63,6 +65,7 @@ export var	personajes = [
 		  modo: 'SS',
 		  raza:'saiyan',
 		  ki:'NO',
+		  aura:"#fff4b3",
 		  user: 'saiyan'
 		},
 		{
@@ -70,6 +73,7 @@ export var	personajes = [
 		  modo: 'SS2',
 		  raza:'saiyan',
 		  ki:'NO',
+		  aura:"gold",
 		  user: 'saiyan'
 		},
 		{
@@ -77,6 +81,7 @@ export var	personajes = [
 		  modo: 'SS3',
 		  raza:'saiyan',
 		  ki:'NO',
+		  aura:"#ccad00",
 		  user: 'saiyan'
 		},
 		{
@@ -84,6 +89,7 @@ export var	personajes = [
 		  modo: 'SS4',
 		  raza:'GT',
 		  ki:'NO',
+		  aura:"gold",
 		  user: 'Vegeta'
 		},
 		{
@@ -91,6 +97,7 @@ export var	personajes = [
 		  modo: 'SSGOD',
 		  raza:'Dios',
 		  ki:'divino',
+		  aura:"#DC143C",
 		  user: 'NO'
 		},
 		{
@@ -98,6 +105,7 @@ export var	personajes = [
 		  modo: 'SSBLUE',
 		  raza:'Dios',
 		  ki:'divino',
+		  aura:"lightblue",
 		  user: 'NO'
 		},
 		{
@@ -105,6 +113,7 @@ export var	personajes = [
 		  modo: 'MYSTIC',
 		  raza:'Dios',
 		  ki:'mistico',
+		  aura:"#bfbfbf",
 		  user: 'NO'
 		},
 		{
@@ -112,6 +121,7 @@ export var	personajes = [
 		  modo: 'ULTRA-EGO',
 		  raza:'NO',
 		  ki:'NO',
+		  aura:"silver",
 		  user: 'Krilin'
 		},
 			  {
@@ -119,6 +129,7 @@ export var	personajes = [
 		  modo: 'UI',
 		  raza:'NO',
 		  ki:'NO',
+		  aura:"silver",
 		  user: 'Goku'
 		},
 			  {
@@ -126,6 +137,7 @@ export var	personajes = [
 		  modo: 'OOZARU CONTENIDO',
 		  raza:'NO',
 		  ki:'NO',
+		  aura:"#ace600",
 		  user: 'Broly'
 		}
 		,
@@ -134,6 +146,7 @@ export var	personajes = [
 		  modo: 'SS Mutante',
 		  raza:'NO',
 		  ki:'NO',
+		  aura:"#39e600",
 		  user: 'Broly'
 		}
 		,
@@ -142,6 +155,7 @@ export var	personajes = [
 		  modo: 'SS Legendario',
 		  raza:'NO',
 		  ki:'NO',
+		  aura:"#00b33c",
 		  user: 'Broly'
 		}
 	  ];

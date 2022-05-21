@@ -5,23 +5,26 @@ import {personajes,formas,imgenemigo,options,Luchar,Empujar,Huir} from '../logic
 
 function Torneo() {
 
-const [formaProta,setFormaProta] = useState("Base")
+const [formaProta,setFormaProta] = useState("Base");
+const [formaColor,setFormaColor] = useState("white");
 const razas = () => {
 	var personaje = personajes[0];
 	// console.log(personaje)
-	console.log(formas);
+	// console.log(formas);
 	var formasposibles = formas.filter(forma => (forma.raza === personaje.raza)
 	 || (personaje.ki === forma.ki) 
 	 ||(personaje.nombre === forma.user) 
 	 || (forma.user === 'TODOS')
 	)
-	console.log(formasposibles);
+	// console.log(formasposibles);
 	return formasposibles;
 
 }
-	function changeRaza(){
-		var razas = razas();
-		console.log(razas)
+	function changeForm(modo,color){
+		console.log(modo);
+		console.log(color);
+		setFormaProta(modo);
+		setFormaColor(color);
 
 	}
 	var misformas = razas();
@@ -43,7 +46,7 @@ const razas = () => {
 		<div className="rival">
 			<h3>Rival</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adip</p>
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmQxJGv23Y2nkUyfQZZTWRWTMEILZm756pg&usqp=CAU" alt="enemy" />
+			<img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmQxJGv23Y2nkUyfQZZTWRWTMEILZm756pg&usqp=CAU" alt="enemy" />
 		</div>
 		<div className="protagonista">
 			<div className="protadata">
@@ -52,11 +55,14 @@ const razas = () => {
 			<p>Guerrero {personajes[0].raza}</p>
 			<p>Nivel de Pelea: {personajes[0].id}</p>
 			<p>Forma Actual: {formaProta}</p>
+			<div className="formas">
+				
 			{misformas.map(forma => 
-				<button type="button" onClick={() => setFormaProta(forma.modo)}>{forma.modo}</button>)}
+				<button key={forma.id} type="button" style={{background:forma.aura}} onClick={() => changeForm(forma.modo,forma.aura)}>{forma.modo}</button>)}
+			</div>
 			</div>
 
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfCQVP-lxNewrbhT5y2M0RdAHRg-aFxdSrpQ&usqp=CAU" alt="Protagonista"/>
+			<img style={{borderColor:formaColor}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfCQVP-lxNewrbhT5y2M0RdAHRg-aFxdSrpQ&usqp=CAU" alt="Protagonista"/>
 
 		</div>
 		<div className="widget-1">
