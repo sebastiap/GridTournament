@@ -27,9 +27,11 @@ function Menu() {
 
             </div>
             </Link>
-            {/* <div className={menuClasses.opcion3}>
-            Soy la tercera opcion
-            </div> */}
+            <Link to="/cardGenerator" className={menuClasses.opcion2}> 
+            <div className={menuClasses.opcion3}>
+            CardGen
+            </div>
+            </Link>
             <div className={menuClasses.footer}>
             Soy el footer del menu
             </div>

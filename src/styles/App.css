@@ -21,8 +21,8 @@ body {
 	grid-template-areas: "header header header"
 						 "rival rival rival "
 						 "widget-1 widget-2 sidebar"
-             "protagonista protagonista sidebar"
-             "contenido contenido contenido"
+             			 "protagonista protagonista sidebar"
+            			 "contenido contenido contenido"
 						 "footer footer footer";
 }
 
@@ -129,15 +129,81 @@ margin:0.5%;
 	grid-area: footer;
 }
 
+/* notebook */
+@media screen and (max-width: 992px){
+	.contenedor {
+		grid-template-areas: "header header header"
+							 "rival rival rival "
+							 "widget-1 widget-2 sidebar"
+							 "protagonista protagonista protagonista"
+							 "contenido contenido contenido"
+							 "footer footer footer";
+	}
+	.contenedor .protagonista img {
+		width: 40%;
+  
+	}
+	/* .contenedor .protagonista .formas button {
+	width: 50%;
+	height:auto;
+	} */
+}
+
+/* laptop */
 @media screen and (max-width: 768px){
 	.contenedor {
 		grid-template-areas: "header header header"
-
-    "rival rival rival "
-						 "contenido contenido contenido"
-						 "sidebar sidebar sidebar"
-             "protagonista protagonista protagonista"
-						 "widget-1 widget-1 widget-2"
-						 "footer footer footer";
+    						 "rival rival rival "
+              				 "protagonista protagonista protagonista"
+			 				 "sidebar sidebar sidebar"
+						 	 "widget-1 widget-1 widget-2"
+						 	 "contenido contenido contenido"
+						 	 "footer footer footer";
 	}
+}
+
+/* mobile */
+@media screen and (max-width: 600px){
+	.contenedor {
+		grid-template-areas: "header header header"
+    						 "rival rival rival "
+             				 "protagonista protagonista protagonista"
+						 	 "sidebar widget-1 widget-2"
+						 	 "contenido contenido contenido"
+						 	 "footer footer footer";
+	}
+	.contenedor .protagonista {
+		height: auto;
+		  grid-area: protagonista;
+		  display:flex;
+		  flex-direction: row;
+		  justify-content:space-between;
+
+		  overflow: hidden;
+	  }
+
+	  .contenedor .protagonista img {
+				width: 45%;
+				/* border-radius: 0px; */
+				border: none;
+		  }
+	  .contenedor .protagonista .formas{
+			width: 55%;
+			height: auto;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+	  
+		}
+
+		.contenedor .protagonista .formas button{
+			width: 280%;
+			height: auto;
+			/* border-radius: 4px; */
+			/* border-color: #fff; */
+			/* align-self: center; */
+			/* margin:0.5%; */
+			
+			}
 }

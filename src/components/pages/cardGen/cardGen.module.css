@@ -1,0 +1,43 @@
+.contenedor{
+width:95%;
+margin:10px auto;
+display: grid;
+grid-gap: 10px;
+grid-template-columns: 30% 35% 35%
+/* grid-template-rows: repeat(3, auto); */
+/* grid-template-areas: "header header header"
+"opcion1 opcion1 opcion1"
+"opcion2 opcion2 opcion2"
+"footer footer footer"; */
+}
+
+.contenedor .header{
+grid-area: header;
+}
+.contenedor .options .form .preview {
+	width: 100%;
+	height: 100%;
+}
+	
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+
+.contenedor .preview  {
+display: flex;
+justify-content:space-around;
+
+}
+
+.contenedor .preview .card {
+	height:336px;
+	width: 235px;
+	background: #000;
+
+}

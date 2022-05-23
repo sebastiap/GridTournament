@@ -9,8 +9,6 @@ const [formaProta,setFormaProta] = useState("Base");
 const [formaColor,setFormaColor] = useState("white");
 const razas = () => {
 	var personaje = personajes[0];
-	// console.log(personaje)
-	// console.log(formas);
 	var formasposibles = formas.filter(forma => (forma.raza === personaje.raza)
 	 || (personaje.ki === forma.ki) 
 	 ||(personaje.nombre === forma.user) 
@@ -41,7 +39,7 @@ const razas = () => {
 		</p>
 		</main>
 		<aside className="sidebar">
-			<h3>SIDEBAR</h3>
+			<h3>PELEAR</h3>
 		</aside>
 		<div className="rival">
 			<h3>Rival</h3>
@@ -66,10 +64,10 @@ const razas = () => {
 
 		</div>
 		<div className="widget-1">
-			<h3>WIDGET 1</h3>
+			<h3>EMPUJAR</h3>
 		</div>
 		<div className="widget-2">
-			<h3>WIDGET 2</h3>
+			<h3>HUIR</h3>
 		</div>
 		<footer className="footer">
 			<h3>FOOTER</h3>

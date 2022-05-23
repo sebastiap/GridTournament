@@ -4,6 +4,7 @@ export var	personajes = [
 		  nombre: 'Goku',
 		  raza:'saiyan',
 		  ki:'divino',
+		  img:"",
 		  vivo: true
 		},
 		{
@@ -11,6 +12,7 @@ export var	personajes = [
 		  nombre: 'Vegeta',
 		  raza:'saiyan',
 		  ki:'divino',
+		  img:"",
 		  vivo: true
 		},
 		{
@@ -18,6 +20,7 @@ export var	personajes = [
 		  nombre: 'Gohan',
 		  raza:'saiyan',
 		  ki:'mistico',
+		  img:"",
 		  vivo: true
 		},
 		{
@@ -25,6 +28,7 @@ export var	personajes = [
 		  nombre: 'Krilin',
 		  raza:'humano',
 		  ki:'normal',
+		  img:"",
 		  vivo: true
 		},
 		{
@@ -39,6 +43,7 @@ export var	personajes = [
 		  nombre: 'Broly',
 		  raza:'LSaiyan',
 		  ki:'normal',
+		  img:"",
 		  vivo: true
 		}
 	  ];
