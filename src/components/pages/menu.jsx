@@ -27,8 +27,8 @@ function Menu() {
 
             </div>
             </Link>
-            <Link to="/cardGenerator" className={menuClasses.opcion2}> 
-            <div className={menuClasses.opcion3}>
+            <Link to="/cardGenerator" className={menuClasses.opcion3}> 
+            <div >
             CardGen
             </div>
             </Link>

@@ -1,5 +1,6 @@
 // import { Link } from 'react-router-dom';
 import genClasses from './cardGen.module.css';
+import CustomButton from '../../common/CustomButton'
 
 function CardGen() {
     return (
@@ -11,14 +12,15 @@ function CardGen() {
 
             <div className={genClasses.options}>
                 <div className={genClasses.botonera}>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
+                    <CustomButton buttonName="Ayuda" color="#5bc0de" onClick={() => {console.log("hola")} }></CustomButton>
+                    <CustomButton buttonName="Borrar Todo" color="$c12e2a" onClick={() => {console.log("hola")} }></CustomButton>
+                    <CustomButton buttonName="Cargar Ejemplo" color="#428bca" onClick={() => {console.log("hola")} }></CustomButton>
+                    <CustomButton buttonName="Cargar Archivo" color="#428bca" onClick={() => {console.log("hola")} }></CustomButton>
+                    <CustomButton buttonName="Grabar Archivo" color="#428bca" onClick={() => {console.log("hola")} }></CustomButton>
+                    <CustomButton buttonName="Ordenar" color="#428bca" onClick={() => {console.log("hola")} }></CustomButton>
+                    <CustomButton buttonName="Map/Filter" color="#428bca" onClick={() => {console.log("hola")} }></CustomButton>
+                    <CustomButton buttonName="Generar Mazo" color="#5cb85c" onClick={() => {console.log("hola")} }></CustomButton>
+
                 </div>
                 <div className={genClasses.pageSettings}>
                     <button>Boton</button>

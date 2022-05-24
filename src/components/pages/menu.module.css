@@ -4,10 +4,11 @@ margin:20px auto;
 display: grid;
 grid-gap: 20px;
 grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(3, auto);
+grid-template-rows: repeat(5, auto);
 grid-template-areas: "header header header"
 "opcion1 opcion1 opcion1"
 "opcion2 opcion2 opcion2"
+"opcion3 opcion3 opcion3"
 "footer footer footer";
 }
 
@@ -20,26 +21,29 @@ grid-area: header;
   text-decoration: none;
 
   }
+  .contenedor .opcion1:hover{
+	width:auto;
+	height:400px;
+	background: darkorange;
+	color:black;
+	
+	  }
 .contenedor .opcion2{
   grid-area: opcion2;
   text-decoration: none;
   }
-.contenedor .opcion1:hover{
-width:auto;
-height:400px;
-background: darkorange;
-color:black;
 
-  }
+
 .contenedor .opcion2:hover{
 	width:auto;
 	height:400px;
 	background: darkmagenta;
 	color: rgb(176, 215, 97);
   }
-.contenedor .opcion3{
-  grid-area: opcion3;
-  }
+  .contenedor .opcion3{
+	grid-area: opcion3;
+	text-decoration: none;
+	}
 
   .contenedor .footer{
     grid-area: footer;

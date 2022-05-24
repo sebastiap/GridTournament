@@ -14,12 +14,26 @@ grid-template-columns: 30% 35% 35%
 .contenedor .header{
 grid-area: header;
 }
-.contenedor .options .form .preview {
-	width: 100%;
-	height: 100%;
+.contenedor .options,.contenedor .form,
+.contenedor .preview {
+	/* width: 100%; */
+	height: 800px;
 }
-	
 
+.contenedor .botonera {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	gap:5%;
+	margin-bottom:10%;
+}
+
+.contenedor .pageSettings,
+.contenedor .defaultSettings {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	gap:5%;
+	margin-bottom:10%;
+}
 .contenedor > div,
 .contenedor .header,
 .contenedor .footer {
