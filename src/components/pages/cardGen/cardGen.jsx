@@ -1,10 +1,29 @@
 // import { Link } from 'react-router-dom';
+import {useState,useRef} from 'react';
+
 import genClasses from './cardGen.module.css';
 import CustomButton from '../../common/CustomButton';
 import PrintButton from '../../common/PrintButton';
 import SimpleButton from '../../common/SimpleButton';
 
 function CardGen() {
+    const [name,setName] = useState("Titulo");
+    const [icon,setIcon] = useState("icono");
+    const [color,setColor] = useState("red");
+    const [content,setContent] = useState("Este es un contenido");
+
+    const inputEl = useRef(null);
+    const inputE2 = useRef(null);
+    const inputE3 = useRef(null);
+    const inputE4 = useRef(null);
+
+    function actualizar() {
+        setName(inputEl.current.value);
+        setIcon(inputE2.current.value);
+        setColor(inputE3.current.value);
+        setContent(inputE4.current.value);
+        console.log(inputE4.current.value);
+    }
     return (
         <>
         <div className={genClasses.header}>
@@ -25,7 +44,7 @@ function CardGen() {
 
                 </div>
                 <div className={genClasses.pageSettings}>
-                    <SimpleButton/>
+                    <SimpleButton buttonName="Cargar Ejemplo"/>
                     <SimpleButton/>
                     <SimpleButton/>
                     <SimpleButton/>
@@ -47,6 +66,10 @@ function CardGen() {
             </div>
             <div className={genClasses.form}>
             <div className={genClasses.formbox}>
+            <CustomButton buttonName="Borrar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
+            <CustomButton buttonName="Agregar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
+            <CustomButton buttonName="Duplicar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
+            <CustomButton buttonName="Aplicar cambios" color="red" onClick={() => {actualizar()} }/>
             <form class="form-horizontal" role="form">
                     <div class="form-group">
                         <label for="selected-card" class="col-sm-2 control-label">Deck</label>
@@ -75,7 +98,7 @@ function CardGen() {
                     <div class="form-group">
                         <label for="card-title" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" id="card-title" class="form-control" placeholder="Title"/>
+                            <input ref={inputEl} type="text" id="card-title" class="form-control" placeholder="Title"/>
                         </div>
                     </div>
                     <div class="form-group">
@@ -112,7 +135,7 @@ function CardGen() {
                                 <span class="input-group-btn">
                                     <button class="btn btn-default icon-select-button" type="button">Search</button>
                                 </span>
-                                <input type="text" id="card-icon" class="form-control icon-list" placeholder="Default icon" data-property="icon"/>
+                                <input ref={inputE3} type="text" id="card-icon" class="form-control icon-list" placeholder="Default icon" data-property="icon"/>
                             </div>
                         </div>
                     </div>
@@ -132,7 +155,7 @@ function CardGen() {
                         <div class="col-sm-10">
                             <div class="input-group">
                                 <select id="card_color_selector" class="colorselector-data"></select>
-                                <input type="text" id="card-color" class="form-control" placeholder="Default color" data-property="color"/>
+                                <input ref={inputE2}  type="text" id="card-color" class="form-control" placeholder="Default color" data-property="color"/>
                             </div>
                         </div>
                     </div>
@@ -145,7 +168,7 @@ function CardGen() {
                     <div class="form-group">
                         <label for="card-contents" class="col-sm-2 control-label">Contents</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" rows="14" id="card-contents"></textarea>
+                            <textarea ref={inputE4}  class="form-control" rows="14" id="card-contents"></textarea>
                         </div>
                     </div>
                 </form>
@@ -153,7 +176,12 @@ function CardGen() {
             </div>
             </div>
             <div className={genClasses.preview}>
-            <div className={genClasses.card} ></div>
+            <div className={genClasses.card} >
+                <p>{name}</p>
+                <p>{icon}</p>
+                <p>{color}</p>
+                <p>{content}</p>
+            </div>
             <div className={genClasses.card} ></div>
             </div>
             
