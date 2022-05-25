@@ -4,7 +4,7 @@ import bttClasses from './SimpleButton.module.css';
 function SimpleButton(props) {
     return (
         <>
-        <button className={bttClasses.button} onClick={props.onClick}>boton</button>
+        <button className={bttClasses.button} onClick={props.onClick}>{props.buttonName}</button>
         </>
     )
 }
