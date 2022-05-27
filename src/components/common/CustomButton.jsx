@@ -4,7 +4,7 @@ import bttClasses from './CustomButton.module.css';
 function CustomButton(props) {
     return (
         <>
-        <button className={bttClasses.buttonClass} onClick={props.onClick}>{props.buttonName}</button>
+        <button style={{background:props.color}} className={bttClasses.buttonClass} onClick={props.onClick}>{props.buttonName}</button>
         </>
     )
 }

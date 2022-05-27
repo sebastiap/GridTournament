@@ -45,23 +45,23 @@ function CardGen() {
                 </div>
                 <div className={genClasses.pageSettings}>
                     <SimpleButton buttonName="Cargar Ejemplo"/>
-                    <SimpleButton/>
-                    <SimpleButton/>
-                    <SimpleButton/>
-                    <SimpleButton/>
-                    <SimpleButton/>
+                    <SimpleButton buttonName="Cargar Ejemplo"/>
                     <PrintButton/>
                     <PrintButton/>
                 </div>
                 <div className={genClasses.defaultSettings}>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
-                    <button>Boton</button>
+                <input type="check"/>
+                <label for="color" />
+                <input type="input" id="color" />
+                <label for="icon" />
+                <input type="input" id="icon" />
+                <label for="title" />
+                <input type="input" id="title" />
+                    <SimpleButton buttonName="Aplicar Color"/>
+                    <SimpleButton buttonName="Aplicar Fuentes de Titulo"/>
+                    <SimpleButton buttonName="Aplicar Icono"/>
+                    <SimpleButton buttonName="Aplicar Icono trasero"/>
+
                 </div>
             </div>
             <div className={genClasses.form}>
