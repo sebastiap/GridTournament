@@ -26,9 +26,9 @@ function CardGen() {
     }
     return (
         <>
-        <div className={genClasses.header}>
+        {/* <div className={genClasses.header}>
         Bienvenido a GridTournament , una coleccion de conceptos con CSS grid
-        </div>
+        </div> */}
         <div className={genClasses.contenedor}>
 
             <div className={genClasses.options}>
@@ -43,19 +43,22 @@ function CardGen() {
                     <CustomButton buttonName="Generar Mazo" color="#5cb85c" onClick={() => {console.log("hola")} }/>
 
                 </div>
+                <h2>Page Settings</h2>
                 <div className={genClasses.pageSettings}>
-                    <SimpleButton buttonName="Cargar Ejemplo"/>
-                    <SimpleButton buttonName="Cargar Ejemplo"/>
+                    {/* <SimpleButton buttonName="Cargar Ejemplo"/> */}
+                    {/* <SimpleButton buttonName="Cargar Ejemplo"/> */}
                     <PrintButton/>
                     <PrintButton/>
                 </div>
+                <h2>Default Settings</h2>
                 <div className={genClasses.defaultSettings}>
-                <input type="check"/>
-                <label for="color" />
-                <input type="input" id="color" />
-                <label for="icon" />
+                <label for="check" >Check</label>
+                <input type="checkbox" id="check" /> 
+                <label for="color" placeholder="color" >Color</label>
+                <input type="color" id="color" />
+                <label for="icon" >Icono</label>
                 <input type="input" id="icon" />
-                <label for="title" />
+                <label for="title" >Titulo </label>
                 <input type="input" id="title" />
                     <SimpleButton buttonName="Aplicar Color"/>
                     <SimpleButton buttonName="Aplicar Fuentes de Titulo"/>
@@ -75,9 +78,7 @@ function CardGen() {
             <form class="form-horizontal" role="form">
                     <div className={genClasses.formgroup}>
                         <label for="selected-card" class="col-sm-2 control-label">Deck</label>
-                        <div class="col-sm-10">
                             <p class="form-control-static" id="total_card_count">Deck contains 0 cards.</p>
-                        </div>
                     </div>
                     <div className={genClasses.formgroup}>
                         <label for="selected-card" class="col-sm-2 control-label">Card</label>
@@ -86,7 +87,7 @@ function CardGen() {
                         </div>
                     </div>
                     <div className={genClasses.buttongroup}>
-                        <label class="col-sm-2 control-label"></label>
+                        {/* <label class="col-sm-2 control-label"></label>
                         <div class="col-sm-4">
                             <button type="button" class="btn btn-danger btn-block" id="button-delete-card">Delete card</button>
                         </div>
@@ -95,7 +96,10 @@ function CardGen() {
                         </div>
                         <div class="col-sm-3">
                             <button type="button" class="btn btn-primary btn-block" id="button-duplicate-card">Duplicate card</button>
-                        </div>
+                        </div> */}
+                        <CustomButton buttonName="Borrar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
+                        <CustomButton buttonName="Agregar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
+                        <CustomButton buttonName="Duplicar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
                     </div>
                     <div className={genClasses.formgroup}>
                         <label for="card-title" class="col-sm-2 control-label">Name</label>
