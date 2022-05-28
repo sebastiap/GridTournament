@@ -66,24 +66,26 @@ function CardGen() {
             </div>
             <div className={genClasses.form}>
             <div className={genClasses.formbox}>
+            <div className={genClasses.buttongroup}>
             <CustomButton buttonName="Borrar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
             <CustomButton buttonName="Agregar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
             <CustomButton buttonName="Duplicar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
             <CustomButton buttonName="Aplicar cambios" color="red" onClick={() => {actualizar()} }/>
+            </div>
             <form class="form-horizontal" role="form">
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="selected-card" class="col-sm-2 control-label">Deck</label>
                         <div class="col-sm-10">
                             <p class="form-control-static" id="total_card_count">Deck contains 0 cards.</p>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="selected-card" class="col-sm-2 control-label">Card</label>
                         <div class="col-sm-10">
                             <select class="form-control" id="selected-card"></select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.buttongroup}>
                         <label class="col-sm-2 control-label"></label>
                         <div class="col-sm-4">
                             <button type="button" class="btn btn-danger btn-block" id="button-delete-card">Delete card</button>
@@ -95,13 +97,13 @@ function CardGen() {
                             <button type="button" class="btn btn-primary btn-block" id="button-duplicate-card">Duplicate card</button>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-title" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
                             <input ref={inputEl} type="text" id="card-title" class="form-control" placeholder="Title"/>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-title-size" class="col-sm-2 control-label">Title</label>
                         <div class="col-sm-10">
                             <select class="form-control" id="card-title-size" data-property="title_size">
@@ -116,19 +118,19 @@ function CardGen() {
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-count" class="col-sm-2 control-label">Count</label>
                         <div class="col-sm-10">
                             <input type="number" id="card-count" class="form-control" placeholder="Count" data-property="count" value="1"/>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-tags" class="col-sm-2 control-label">Tags</label>
                         <div class="col-sm-10">
                             <input type="text" id="card-tags" class="form-control" placeholder="Tags"/>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-icon" class="col-sm-2 control-label">Icon</label>
                         <div class="col-sm-10">
                             <div class="input-group">
@@ -139,7 +141,7 @@ function CardGen() {
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-icon-back" class="col-sm-2 control-label">Back icon</label>
                         <div class="col-sm-10">
                             <div class="input-group">
@@ -150,7 +152,7 @@ function CardGen() {
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-color" class="col-sm-2 control-label">Color</label>
                         <div class="col-sm-10">
                             <div class="input-group">
@@ -159,13 +161,13 @@ function CardGen() {
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-background" class="col-sm-2 control-label">Background</label>
                         <div class="col-sm-10">
                             <input type="text" id="card-background" class="form-control" placeholder="Background image URL" data-property="background_image"/>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className={genClasses.formgroup}>
                         <label for="card-contents" class="col-sm-2 control-label">Contents</label>
                         <div class="col-sm-10">
                             <textarea ref={inputE4}  class="form-control" rows="14" id="card-contents"></textarea>
