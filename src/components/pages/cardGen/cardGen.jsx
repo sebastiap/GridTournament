@@ -8,7 +8,7 @@ import SimpleButton from '../../common/SimpleButton';
 
 function CardGen() {
     const [name,setName] = useState("Titulo");
-    const [icon,setIcon] = useState("icono");
+    const [icon,setIcon] = useState("caesar");
     const [color,setColor] = useState("red");
     const [content,setContent] = useState("Este es un contenido");
 
@@ -18,9 +18,12 @@ function CardGen() {
     const inputE4 = useRef(null);
 
     function actualizar() {
+        var algo = inputE3.current.value;
+        console.log(algo);
+        console.log(typeof algo);
         setName(inputEl.current.value);
-        setIcon(inputE2.current.value);
-        setColor(inputE3.current.value);
+        setIcon(inputE3.current.value);
+        setColor(inputE2.current.value);
         setContent(inputE4.current.value);
         console.log(inputE4.current.value);
     }
@@ -87,16 +90,7 @@ function CardGen() {
                         </div>
                     </div>
                     <div className={genClasses.buttongroup}>
-                        {/* <label class="col-sm-2 control-label"></label>
-                        <div class="col-sm-4">
-                            <button type="button" class="btn btn-danger btn-block" id="button-delete-card">Delete card</button>
-                        </div>
-                        <div class="col-sm-3">
-                            <button type="button" class="btn btn-primary btn-block" id="button-add-card">Add new card</button>
-                        </div>
-                        <div class="col-sm-3">
-                            <button type="button" class="btn btn-primary btn-block" id="button-duplicate-card">Duplicate card</button>
-                        </div> */}
+  
                         <CustomButton buttonName="Borrar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
                         <CustomButton buttonName="Agregar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
                         <CustomButton buttonName="Duplicar Carta" color="#428bca" onClick={() => {console.log("hola")} }/>
@@ -104,14 +98,14 @@ function CardGen() {
                     <div className={genClasses.formgroup}>
                         <label for="card-title" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
-                            <input ref={inputEl} type="text" id="card-title" class="form-control" placeholder="Title"/>
+                            <input ref={inputEl} type="text" id="card-title" class="form-control" placeholder="Ingrese titulo de la carta"/>
                         </div>
                     </div>
                     <div className={genClasses.formgroup}>
-                        <label for="card-title-size" class="col-sm-2 control-label">Title</label>
+                        <label for="card-title-size" class="col-sm-2 control-label">Titulo</label>
                         <div class="col-sm-10">
                             <select class="form-control" id="card-title-size" data-property="title_size">
-                                <option value="" selected>default font</option>
+                                <option value="" selected>Fuente Predeterminada</option>
                                 <option value="16">16pt font</option>
                                 <option value="15">15pt font</option>
                                 <option value="14">14pt font</option>
@@ -184,7 +178,7 @@ function CardGen() {
             <div className={genClasses.preview}>
             <div className={genClasses.card} >
                 <p>{name}</p>
-                <p>{icon}</p>
+                <img src={"https://game-icons.net/icons/ffffff/000000/1x1/delapouite/" + icon + ".svg"} alt={icon} />
                 <p>{color}</p>
                 <p>{content}</p>
             </div>
