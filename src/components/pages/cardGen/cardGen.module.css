@@ -94,3 +94,36 @@ select,textarea {
 	height:auto;
 	margin:1em auto;
 }
+
+.cardbackinner {
+    margin: 3mm;
+    border: 1mm solid;
+    border-color: inherit;
+    border-radius: 4mm;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border: 2mm solid;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 8pt;
+    overflow: hidden;
+}
+
+.cardbackicon {
+    width: 1in;
+    height: 1in;
+    border: 2mm solid;
+    border-color: inherit;
+    border-radius: 4mm;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

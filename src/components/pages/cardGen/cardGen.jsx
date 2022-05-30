@@ -9,7 +9,7 @@ import SimpleButton from '../../common/SimpleButton';
 function CardGen() {
     const [name,setName] = useState("Titulo");
     const [icon,setIcon] = useState("caesar");
-    const [color,setColor] = useState("red");
+    const [color,setColor] = useState("black");
     const [content,setContent] = useState("Este es un contenido");
 
     const inputEl = useRef(null);
@@ -22,7 +22,7 @@ function CardGen() {
         console.log(algo);
         console.log(typeof algo);
         setName(inputEl.current.value);
-        setIcon(inputE3.current.value);
+        // setIcon(inputE3.current.value);
         setColor(inputE2.current.value);
         setContent(inputE4.current.value);
         console.log(inputE4.current.value);
@@ -155,7 +155,7 @@ function CardGen() {
                         <div class="col-sm-10">
                             <div class="input-group">
                                 <select id="card_color_selector" class="colorselector-data"></select>
-                                <input ref={inputE2}  type="text" id="card-color" class="form-control" placeholder="Default color" data-property="color"/>
+                                <input ref={inputE2}  type="color" id="card-color" class="form-control" placeholder="Default color" data-property="color"/>
                             </div>
                         </div>
                     </div>
@@ -176,13 +176,22 @@ function CardGen() {
             </div>
             </div>
             <div className={genClasses.preview}>
-            <div className={genClasses.card} >
-                <p>{name}</p>
+            <div className={genClasses.card} style={{background:color}}>
+            <div className={genClasses.title} > 
+            <p>{name}</p>
+            </div>
+               
                 <img src={"https://game-icons.net/icons/ffffff/000000/1x1/delapouite/" + icon + ".svg"} alt={icon} />
-                <p>{color}</p>
+                {/* <p>{color}</p> */}
                 <p>{content}</p>
             </div>
-            <div className={genClasses.card} ></div>
+            <div className={genClasses.card} style={{background:color}}>
+                <div className={genClasses.cardbackinner} >
+                    <div className={genClasses.cardbackicon} >
+                        <img  src={"https://game-icons.net/icons/ffffff/000000/1x1/delapouite/" + icon + ".svg"} alt={icon} />
+                    </div>
+                </div>
+            </div>
             </div>
             
         </div>
