@@ -55,15 +55,16 @@ body {
   align-items: space-around;
   justify-content: space-between;
   grid-area: rival;
+
 }
+
+
 .contenedor .protagonista {
   height: 200px;
 	grid-area: protagonista;
 	display:flex;
 	flex-direction: row;
 	justify-content:space-between;
-	/* align-items: ; */
-	/* height: 100%; */
 	overflow: hidden;
 }
 .contenedor .protagonista img {
@@ -122,11 +123,31 @@ margin:0.5%;
 .contenedor .widget-2 {
 	grid-area: widget-2;
 }
+.contenedor .widget-1:hover,.contenedor .widget-2:hover {
+	border: 1px solid;
+	border-color: #000;
+	padding: 15px;
+	box-shadow: 2px 5px #12203E;
+	transition:  0.5;
+	transform: translateY(-7px);
+	
+}
+.contenedor .sidebar:hover {
+	border: 1px solid;
+	border-color: #000;
+	padding: 15px;
+	box-shadow: 5px 5px #777777;
+	transition:  0.5;
+	transform: translateY(-7px);
+	font-size:20px
+	
+}
 
 .contenedor .footer {
 	background: #12203E;
 	color: #fff;
 	grid-area: footer;
+	text-align:right;
 }
 
 /* notebook */
@@ -178,17 +199,14 @@ margin:0.5%;
 		  display:flex;
 		  flex-direction: row;
 		  justify-content:space-between;
-
 		  overflow: hidden;
 	  }
 
 	  .contenedor .protagonista img {
 				width: 45%;
-				/* border-radius: 0px; */
-				border: none;
 		  }
 	  .contenedor .protagonista .formas{
-			width: 55%;
+			width: max-content;
 			height: auto;
 			display: flex;
 			flex-wrap: wrap;

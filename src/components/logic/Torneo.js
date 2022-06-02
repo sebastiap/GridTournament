@@ -51,7 +51,7 @@ export var	personajes = [
 	 export var formas = [
 		{
 		  id: 10,
-		  modo: 'Raged',
+		  modo: 'RAGED',
 		  raza:'NO',
 		  ki:'NO',
 		  aura:"#b30000",
@@ -59,7 +59,7 @@ export var	personajes = [
 		},
 		{
 		  id: 20,
-		  modo: 'Kaioken',
+		  modo: 'KAIOKEN',
 		  raza:'NO',
 		  ki:'NO',
 		  aura:"red",
@@ -177,7 +177,7 @@ export var	options= [
 
 export function Luchar() { 
 			this.logtorneo = this.logtorneo + "\n" +  this.lineacomando;
-			if (this.tecnica != 'Ninguna') { //PUNTOS EXTRAS POR HABILIDAD
+			if (this.tecnica !== 'Ninguna') { //PUNTOS EXTRAS POR HABILIDAD
 			this.puntaje = this.puntaje + 50;
 				if (this.tecnica === 'MAFUBA') {
 				this.options[4].usos--;
