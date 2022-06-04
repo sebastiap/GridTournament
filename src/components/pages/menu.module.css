@@ -48,12 +48,16 @@ grid-area: header;
 
 	.contenedor .opcion3:hover{
 		width:auto;
-		height:400px;
-		background: red;
+		height:300px;
+		background: rgb(227, 207, 93);
 		color: black;
+		/* text-align: center; */
+		align-items: center;
+		justify-content:space-between;
 	  }
   .contenedor .footer{
     grid-area: footer;
+	text-align: center;
     }
 
 .contenedor > div,
@@ -85,6 +89,15 @@ justify-content: space-around;
 align-items: center;
 height: 90%;
 text-align: center;
+
+}
+.opcion3  {
+display: flex;
+flex-direction: column;
+/* align-items: center; */
+height: 80%;
+transition: 1s;
+
 
 }
 .flexItemCard {

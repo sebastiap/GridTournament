@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import menuClasses from './menu.module.css';
 
 function Menu() {
+  
+
+   
+
     return (
-        <div className={menuClasses.contenedor}>
+        <div className={menuClasses.contenedor} >
             <div className={menuClasses.header}>
             Bienvenido a GridTournament , una coleccion de conceptos con CSS grid
             </div>
@@ -28,12 +32,18 @@ function Menu() {
             </div>
             </Link>
             <Link to="/cardGenerator" className={menuClasses.opcion3}> 
+            
             <div >
-            CardGen
+            <h1>Generador de Cartas</h1>
+            </div>
+            <div >
+            <canvas id="canvas" width="150" height="200">
+
+            </canvas>
             </div>
             </Link>
             <div className={menuClasses.footer}>
-            Soy el footer del menu
+            Copyleft Sebastian Picardi 2022
             </div>
         </div>
     )

@@ -12,6 +12,8 @@ Adaptacion de un juego realizado previamente en Vue con Bootstrap. Esta version 
 ### Tarot
 Tirada basica de 3 cartas.
 
+### Card Generator
+Tirada basica de 3 cartas.
 
 ## Conceptos Generales
 * Buenas Practicas en Estructura de directorios
@@ -29,11 +31,14 @@ Tirada basica de 3 cartas.
 ## Pendientes
 - [x] Css Grid Layout
 - [x] FlexBox Layout(interno) - Opcion Menu
-- [ ] FlexBox Layout(interno)
+- [X] FlexBox Layout(interno)
+- [ ] Canvas
+
 
 ## Juegos
-- [ ]  Torneo
-- [ ]  Tarot
+- [X]  Torneo
+- [X]  Tarot
+- [ ]  Creador de Cartas
 
 
 ## Opcionales

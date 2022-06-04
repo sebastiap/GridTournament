@@ -10,34 +10,61 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+          var ctx = canvas.getContext('2d');
+  
+          ctx.fillStyle = 'black'; // Recuadro
+          ctx.fillRect(30, 10, 100, 200);
+  
+          ctx.fillStyle = 'darkgreen'; // Borde Carta
+          ctx.fillRect(34, 14, 92, 182);
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+
+          // // ctx.fillRect(25, 25, 80, 80);
+          // ctx.clearRect(45, 45, 40, 40);
+          // ctx.strokeRect(50, 50, 30, 30);
+
+          ctx.fillStyle = 'aliceblue';// Recuadro imagen
+          ctx.fillRect(38, 26, 84, 76);
+
+          ctx.fillStyle = 'rgb(255,170,0)';
+          ctx.beginPath();
+          ctx.arc(80, 65, 35, 0, Math.PI * 2, true); // Outer circle
+          ctx.fill();
+          ctx.beginPath();
+          ctx.moveTo(65, 70);
+          ctx.arc(80, 70, 15, 0, Math.PI, false);  // Mouth (clockwise)
+          ctx.moveTo(70, 50);
+          ctx.arc(65, 50, 5, 0, Math.PI * 2, true);  // Left eye
+          ctx.moveTo(95, 50);
+          ctx.arc(90, 50, 5, 0, Math.PI * 2, true);  // Right eye
+          ctx.stroke();
+
+
+          ctx.fillStyle = 'rgba(200, 200, 200)';
+          ctx.fillRect(38, 108, 84, 84);
+
+          ctx.fillStyle = 'rgba(0, 0, 0)'; // Card Text
+          ctx.font = '14px serif';
+          ctx.fillText('Strike First.', 44, 124);
+          ctx.fillText('Strike Hard.', 44, 148);
+          ctx.fillText('Some Mercy.', 44, 172);
+
+          ctx.font = '11px serif';
+          ctx.fillStyle = 'rgba(255, 255, 255)';
+          ctx.fillText('Canvas Smile', 45, 22);
+        }
+      }
+    </script>
     <title>React App</title>
   </head>
-  <body>
+  <body onLoad="draw();">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
