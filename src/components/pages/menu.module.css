@@ -21,6 +21,12 @@ grid-area: header;
   text-decoration: none;
 
   }
+
+  .contenedor .opcion1 img{
+
+	height: 70%;
+  
+	}
   .contenedor .opcion1:hover{
 	width:auto;
 	height:400px;

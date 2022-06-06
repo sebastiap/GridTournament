@@ -16,6 +16,9 @@ function Menu() {
             <h1>
             Torneo de Poder
             </h1>
+            <img src="https://64.media.tumblr.com/c07e7a11e1419375958094a8b3de334f/tumblr_nszghzvasq1uzhzl0o1_250.gifv"/>
+            <img src="https://64.media.tumblr.com/0a83746f02cbc37b0decf79fe2fc1010/tumblr_nrsjclOaAt1uzhzl0o1_400.gifv"/>
+            <img src="https://64.media.tumblr.com/699774ecfb6a05ddce934cabc743dac8/tumblr_ns2iexYJfk1uzhzl0o1_250.gifv"/>
             <p> En este proyecto debes lograr que nuestro protagonista participe en un torneo que solo seguira mientras mantenga entretenido al malvado organizador.</p>
             </Link>
 
