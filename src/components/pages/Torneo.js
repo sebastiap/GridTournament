@@ -1,7 +1,7 @@
 
 import '../../../src/styles/App.css';
 import {useState} from "react"
-import {personajes,formas,imgenemigo,options,Luchar,Empujar,Huir} from '../logic/Torneo'
+import {personajes,formas,imgenemigo,options as tecnicas,Luchar,Empujar,Huir} from '../logic/Torneo'
 
 function Torneo() {
 
@@ -11,23 +11,37 @@ const [poderenemigo,setPoderEnemigo] = useState(1000);
 const [protagonista,setProtagonista] = useState(personajes[0]);
 
 const razas = () => {
-	var personaje = personajes[0];
+	var personaje = protagonista;
 	var formasposibles = formas.filter(forma => (forma.raza === personaje.raza)
 	 || (personaje.ki === forma.ki) 
 	 ||(personaje.nombre === forma.user) 
 	 || (forma.user === 'TODOS')
 	)
-	// console.log(formasposibles);
 	return formasposibles;
 
 }
 	function changeForm(modo,color){
-		console.log(modo);
+		console.log(protagonista);
 		console.log(color);
 		setFormaProta(modo);
 		setFormaColor(color);
 
 	}
+	function handleChange(event)  {
+		let obj = JSON.parse(event.target.value);
+		setProtagonista(obj);
+		console.log(obj)
+
+	  }
+
+	  function pelear()  {
+		setPoderEnemigo(1000) //a futuro random
+		Luchar();
+		Huir();
+		Empujar();
+
+	  }
+
 	var misformas = razas();
   return (
     <div className="App">
@@ -46,7 +60,8 @@ const razas = () => {
 			<h3>PELEAR</h3>
 		</aside>
 		<div className="rival">
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmQxJGv23Y2nkUyfQZZTWRWTMEILZm756pg&usqp=CAU" alt="enemy" />
+			{/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmQxJGv23Y2nkUyfQZZTWRWTMEILZm756pg&usqp=CAU" alt="enemy" /> */}
+			<img src={imgenemigo} alt="enemy" />
 			<div>
 			<h3>Rival</h3>
 			<h3>Nivel de pelea: {poderenemigo}</h3>
@@ -56,9 +71,18 @@ const razas = () => {
 		<div className="protagonista">
 			<div className="protadata">
 
-			<h3>{personajes[0].nombre}</h3>
-			<p>Guerrero {personajes[0].raza}</p>
-			<p>Nivel de Pelea: {personajes[0].id}</p>
+			<h3>{protagonista.nombre}</h3>
+			{/* <p>Guerrero {personajes[0].raza}</p> */}
+			<select name="select"  id='pjselect' 
+			onChange={handleChange}
+			// defaultValue={{ label: "Cambiar Personaje", value: 0 }}
+			// value={protagonista}
+			
+			>
+				{personajes.map(pj => <option key={pj.id} value={JSON.stringify(pj)}>{pj.nombre}</option> )}
+			</select>
+		 
+			<p>Nivel de Pelea: {protagonista.id}</p>
 			<p>Forma Actual: {formaProta}</p>
 			<div className="formas">
 				
