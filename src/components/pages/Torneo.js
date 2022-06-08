@@ -91,7 +91,9 @@ const razas = () => {
 			</div>
 			</div>
 
-			<img style={{borderColor:formaColor}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfCQVP-lxNewrbhT5y2M0RdAHRg-aFxdSrpQ&usqp=CAU" alt="Protagonista"/>
+			<img style={{borderColor:formaColor}} src={protagonista.img} 
+			width="250" height="200" 
+			alt="Protagonista"/>
 
 		</div>
 		<div className="widget-1">
