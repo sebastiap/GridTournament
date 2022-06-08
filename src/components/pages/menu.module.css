@@ -1,14 +1,15 @@
 .contenedor{
 width:90%;
+height:100%;
 margin:20px auto;
 display: grid;
 grid-gap: 20px;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(5, auto);
 grid-template-areas: "header header header"
-"opcion1 opcion1 opcion1"
-"opcion2 opcion2 opcion2"
-"opcion3 opcion3 opcion3"
+"opcion1 opcion2 opcion3"
+"opcion1 opcion2 opcion3"
+"opcion1 opcion2 opcion3"
 "footer footer footer";
 }
 
@@ -17,19 +18,24 @@ grid-area: header;
 }
 
 .contenedor .opcion1{
+  display: flex;
+  flex-direction: column;
+  
   grid-area: opcion1;
   text-decoration: none;
-
+  
   }
 
-  .contenedor .opcion1 img{
-
-	height: 70%;
+  .contenedor .opcion1 .imgcontainer{
+	width: 350px;
+	height:400px;
+	display: flex;
+	flex-direction: row;
   
 	}
   .contenedor .opcion1:hover{
 	width:auto;
-	height:400px;
+	height:700px;
 	background: darkorange;
 	color:black;
 	
@@ -121,17 +127,28 @@ transition: 0.5s;
 	margin: 0px 20px 20px 30px;
 	}
 
-/*
 
-@media screen and (max-width: 768px){
+
+/* notebook */
+@media screen and (max-width: 992px){
 	.contenedor {
 		grid-template-areas: "header header header"
+		"opcion1 opcion1 opcion1"
+		"opcion2 opcion2 opcion2"
+		"opcion3 opcion3 opcion3"
+		"footer footer footer";
+		}
+		.contenedor .opcion1 {
+			/* display:flex; */
+			/* align-items: center; */
+			text-align: center;
+			overflow: hidden;
+		}
 
-    "rival rival rival "
-						 "contenido contenido contenido"
-						 "sidebar sidebar sidebar"
-             "protagonista protagonista protagonista"
-						 "widget-1 widget-1 widget-2"
-						 "footer footer footer";
+		.contenedor .opcion1 img{
+
+			height: 70%;
+			
+		  
+			}
 	}
-} */
