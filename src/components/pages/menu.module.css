@@ -20,19 +20,27 @@ grid-area: header;
 .contenedor .opcion1{
   display: flex;
   flex-direction: column;
-  
+  width: 300px;
   grid-area: opcion1;
   text-decoration: none;
   
   }
 
   .contenedor .opcion1 .imgcontainer{
-	width: 350px;
-	height:400px;
+
 	display: flex;
+	justify-content: space-between;
 	flex-direction: row;
   
 	}
+
+	.contenedor .opcion1 .imgcontainer:hover{
+		height:400px;
+		width:300px;
+		flex-wrap: wrap;
+		margin-bottom: 150px;
+		align-self: center;
+		}
   .contenedor .opcion1:hover{
 	width:auto;
 	height:700px;
@@ -48,7 +56,7 @@ grid-area: header;
 
 .contenedor .opcion2:hover{
 	width:auto;
-	height:400px;
+	/* height:400px; */
 	background: darkmagenta;
 	color: rgb(176, 215, 97);
   }
@@ -56,6 +64,8 @@ grid-area: header;
   .contenedor .opcion3{
 	grid-area: opcion3;
 	text-decoration: none;
+	align-items: center;
+	justify-content:space-between;
 	}
 
 	.contenedor .opcion3:hover{
@@ -86,7 +96,7 @@ grid-area: header;
 .contenedor .opcion3 {
 	background: #333333;
 	padding: 20px;
-	height: 250px;
+	height: 700px;
 	width: auto;
 	color: #fff;
 	border-radius: 4px;
@@ -151,4 +161,16 @@ transition: 0.5s;
 			
 		  
 			}
+
+			.contenedor .opcion1,
+.contenedor .opcion2,
+.contenedor .opcion3 {
+	background: #333333;
+	padding: 20px;
+	height: 250px;
+	width: auto;
+	color: #fff;
+	border-radius: 4px;
+	transition: 0.5s;
+}
 	}
