@@ -173,4 +173,45 @@ transition: 0.5s;
 	border-radius: 4px;
 	transition: 0.5s;
 }
+.contenedor .opcion1 .imgcontainer{
+	height: 150px;
+	width:max-content;
+	flex-wrap: nowrap;
+	align-self: center;
+	}
+
+.contenedor .opcion1 .imgcontainer:hover{
+	height: 150px;
+	width:max-content;
+	flex-wrap: nowrap;
+	margin-bottom: 0;
+	/* align-self: center; */
+	}
+	.contenedor .opcion1:hover{
+
+	}
+
+.contenedor .opcion1:hover,.contenedor .opcion2:hover,.contenedor .opcion3:hover{
+width:auto;
+height: 250px;
+background: rgb(109, 240, 190);
+color:black;
+
+  }
+
+  .flexItemCard {
+	height:180px;
+	width:150px;
+	background: green;
+	transition: 0.5s;
+	}
+	
+	.flexItemCard:hover {
+		height:180px;
+		width:150px;
+		color:white;
+		font-size:1.5em;
+		background: darkred;
+		margin: 0px 20px 20px 30px;
+		}
 	}
