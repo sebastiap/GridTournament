@@ -13,7 +13,7 @@ Adaptacion de un juego realizado previamente en Vue con Bootstrap. Esta version 
 Tirada basica de 3 cartas.
 
 ### Card Generator
-Tirada basica de 3 cartas.
+Generador de Cartas con datos Basicos.
 
 ## Conceptos Generales
 * Buenas Practicas en Estructura de directorios
@@ -32,13 +32,13 @@ Tirada basica de 3 cartas.
 - [x] Css Grid Layout
 - [x] FlexBox Layout(interno) - Opcion Menu
 - [X] FlexBox Layout(interno)
-- [ ] Canvas
+- [X] Canvas
 
 
 ## Juegos
 - [X]  Torneo
 - [X]  Tarot
-- [ ]  Creador de Cartas
+- [X]  Creador de Cartas
 
 
 ## Opcionales
@@ -48,9 +48,7 @@ Tirada basica de 3 cartas.
 
 
 ## Problemas Resueltos - General 🐛🦗🐞
-### localStorage  
-Para evitar que se loguee varias verces, termine ubicandolo en el archivo de contexto. Pense por un momento en aplicarlo en app.js o en la parte de secciones pero demostro ser 
-problematico y termine optando por la solucion mas feliz.
+
 
 ## Problemas Resueltos - Github Pages 🐛
 
