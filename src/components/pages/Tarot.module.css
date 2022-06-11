@@ -15,8 +15,9 @@ margin:20px auto;
 display: grid;
 grid-gap: 20px;
 grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(3, auto);
+grid-template-rows: repeat(4, auto);
 grid-template-areas: "header header header"
+"card-1 card-2 card-3"
 "card-1 card-2 card-3"
 "footer footer footer";
 }
@@ -53,15 +54,37 @@ grid-area: header;
 .contenedorTarot .card1,
 .contenedorTarot .card2,
 .contenedorTarot .card3{
+
 	background: #fff;
 	padding: 20px;
-	height: 550px;
+	height: 750px;
 	width: auto;
 	color: #fff;
 	border-radius: 4px;
 	padding:0;
 	background-image: url("https://cdn.pixabay.com/photo/2017/08/08/00/33/constellations-2609647__340.jpg");
 	background-size: 100% 100%;
+}
+
+@media screen and (max-width: 1000px){
+	.contenedorTarot {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, auto);
+		grid-template-areas: "header header header"
+		"card-1 card-2 card-3"
+		"footer footer footer";
+} 
+
+.contenedorTarot .card1,
+.contenedorTarot .card2,
+.contenedorTarot .card3{
+
+	background: #fff;
+	padding: 20px;
+	height: 550px;
+	width: auto;
+
+}
 }
 
 @media screen and (max-width: 768px){
@@ -71,3 +94,5 @@ grid-area: header;
 		"card-3 card-3 footer";
 	}
 } 
+
+
