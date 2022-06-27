@@ -43,8 +43,9 @@ Generador de Cartas con datos Basicos.
 
 ## Opcionales
 - [ ] Storage en una BD
+- [ ]  Storage en JSON
 - [ ] Backend en Node/Python
-- [ ] Herramienta para desarrollo de juegos?
+
 
 
 ## Problemas Resueltos - General 🐛🦗🐞
