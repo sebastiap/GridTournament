@@ -42,6 +42,7 @@ Generador de Cartas con datos Basicos.
 
 
 ## Opcionales
+- [ ] Hacer un creador de cartas mas util y performante.
 - [ ] Storage en una BD
 - [ ]  Storage en JSON
 - [ ] Backend en Node/Python
