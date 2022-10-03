@@ -36,7 +36,7 @@ grid-area: header;
 
 	.contenedor .opcion1 .imgcontainer:hover{
 		height:400px;
-		width:300px;
+		/* width:300px; */
 		flex-wrap: wrap;
 		margin-bottom: 150px;
 		align-self: center;
