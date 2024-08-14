@@ -4,13 +4,13 @@ height:100%;
 margin:20px auto;
 display: grid;
 grid-gap: 20px;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(5, auto);
-grid-template-areas: "header header header"
-"opcion1 opcion2 opcion3"
-"opcion1 opcion2 opcion3"
-"opcion1 opcion2 opcion3"
-"footer footer footer";
+grid-template-areas: "header header header header"
+"opcion1 opcion2 opcion3 opcion4"
+"opcion1 opcion2 opcion3 opcion4"
+"opcion1 opcion2 opcion3 opcion4"
+"footer footer footer footer";
 }
 
 .contenedor .header{
@@ -77,6 +77,25 @@ grid-area: header;
 		align-items: center;
 		justify-content:space-between;
 	  }
+
+	  .contenedor .opcion4{
+		grid-area: opcion4;
+		text-decoration: none;
+		align-items: center;
+		background-color: #333333;
+		justify-content:space-between;
+		}
+
+  .contenedor .opcion4:hover{
+	width:auto;
+	height:300px;
+	background: rgb(227, 207, 93);
+	color: black;
+			/* text-align: center; */
+	align-items: center;
+	justify-content:space-between;
+  }
+
   .contenedor .footer{
     grid-area: footer;
 	text-align: center;
@@ -146,6 +165,7 @@ transition: 0.5s;
 		"opcion1 opcion1 opcion1"
 		"opcion2 opcion2 opcion2"
 		"opcion3 opcion3 opcion3"
+		"opcion4 opcion4 opcion4"
 		"footer footer footer";
 		}
 		.contenedor .opcion1 {
@@ -164,7 +184,8 @@ transition: 0.5s;
 
 			.contenedor .opcion1,
 .contenedor .opcion2,
-.contenedor .opcion3 {
+.contenedor .opcion3,
+.contenedor .opcion4 {
 	background: #333333;
 	padding: 20px;
 	height: 250px;
@@ -191,7 +212,7 @@ transition: 0.5s;
 
 	}
 
-.contenedor .opcion1:hover,.contenedor .opcion2:hover,.contenedor .opcion3:hover{
+.contenedor .opcion1:hover,.contenedor .opcion2:hover,.contenedor .opcion3:hover ,.contenedor .opcion4:hover{
 width:auto;
 height: 250px;
 background: rgb(109, 240, 190);

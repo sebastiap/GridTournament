@@ -1,0 +1,83 @@
+.resizer{
+	height: 5vh;
+	width: 5vw;
+	resize: both;
+	overflow: hidden;
+	}
+
+.morfismbox{
+	background-color: #f9f9f9;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	}
+
+.morfismbox > div {
+	height: 20rem;
+	width: 20rem;
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items: center;
+}
+
+.morfism:hover{
+	box-shadow: 12px 12px 12px rgba(0,0,0,0.1), -10px -10px 10px white;
+}
+.morfisminset:hover{
+	box-shadow: 12px 12px 12px rgba(0,0,0,0.1) inset, -10px -10px 10px white inset;
+}
+
+.invi{
+	display: none;
+	background-color:red;
+}
+
+#checkbox:checked ~ .invi{
+	display: block;
+	background-color:rgb(179, 0, 255);
+}
+
+.wall{
+	width: 0vh;
+}
+
+.glass{
+		height: 10vh;
+		width: 20vw;
+		border-radius: 20px;
+		background-color: rgba(255, 255, 255, 0.05);
+		backdrop-filter: blur(10px);
+		border: 1px solid #e2b1ffc4;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); 
+	  
+}
+
+.glass:hover{
+	backdrop-filter: blur(0);
+}
+
+.h1color h1{
+	background: linear-gradient(to right , green , yellow);
+	background-clip: text;
+	color: transparent;
+
+}
+
+.wrapper{
+	display: flex;
+	gap: 20px;
+	width: 300px;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+  }
+  .card{
+	scroll-snap-align: center;
+	box-sizing: border-box;
+	padding: 20px 30px;
+	flex-shrink: 0;
+	width: 300px;
+	background-color: white;
+	border-radius: 14px;
+	text-align: center;
+  }

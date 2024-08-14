@@ -48,6 +48,15 @@ function Menu() {
             </canvas>
             </div>
             </Link>
+            <Link to="/varios" className={menuClasses.opcion4}> 
+            
+            <div >
+            <h1>Prueba de conceptos Varios</h1>
+            </div>
+            <div >
+
+            </div>
+            </Link>
             <div className={menuClasses.footer}>
             Copyleft Sebastian Picardi 2022
             </div>
